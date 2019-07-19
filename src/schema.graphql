@@ -40,6 +40,7 @@ type Vote {
 
 type Link {
   id: ID!
+  createdAt: String!
   description: String!
   url: String!
   postedBy: User

@@ -63,6 +63,7 @@ async function vote(parent, args, context, info) {
 function post(parent, args, context, info) {
   const userId = getUserId(context);
   return context.prisma.createLink({
+    createdAt: Date.now,
     url: args.url,
     description: args.description,
     postedBy: { connect: { id: userId } }
